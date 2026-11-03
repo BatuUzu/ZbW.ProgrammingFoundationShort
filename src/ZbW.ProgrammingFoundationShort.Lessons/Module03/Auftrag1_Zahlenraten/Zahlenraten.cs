@@ -17,6 +17,7 @@ public static class Zahlenraten
 {
   public static void Start()
   {
+
     // TODO 1: Random-Objekt erstellen, Zufallszahl 1-100 generieren
     //         var random = new Random();
     //         int geheimzahl = random.Next(1, 101);
