@@ -15,6 +15,9 @@ public static class StatistikRechner
 {
   public static void Start()
   {
+    int[] zahlen = {1,2,3,4,5};
+
+
     // TODO 1: int[5]-Array deklarieren
     //         5 Zahlen einlesen und im Array speichern
 
@@ -24,12 +27,34 @@ public static class StatistikRechner
 
   public static int Minimum(int[] zahlen)
   {
+    int min = zahlen [0];
+
+    for (int i = 1; i < zahlen.Length; i++)
+    {
+      if (zahlen [i] < min)
+      {
+        min = zahlen [i];
+      }
+    }
+
+    return min;
     // TODO: Kleinste Zahl finden (Schleife, kein LINQ)
     throw new NotImplementedException("TODO: Minimum implementieren");
   }
 
   public static int Maximum(int[] zahlen)
   {
+    int max = zahlen[0];
+
+    for (int i = 1; i < zahlen.Length; i++)
+    {
+      if (zahlen[i] > max)
+      {
+        max = zahlen[i];
+      }
+    }
+
+    return max;
     // TODO: Grösste Zahl finden (Schleife, kein LINQ)
     throw new NotImplementedException("TODO: Maximum implementieren");
   }
