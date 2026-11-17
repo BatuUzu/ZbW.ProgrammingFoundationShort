@@ -26,46 +26,112 @@ partial class TemperaturAuswertungForm
     LblMin = new Label();
     SuspendLayout();
 
-    string[] tage = { "Mo", "Di", "Mi", "Do", "Fr", "Sa", "So" };
-    Label[] labels = { LblMo, LblDi, LblMi, LblDo, LblFr, LblSa, LblSo };
-    TextBox[] felder = { TxtMo, TxtDi, TxtMi, TxtDo, TxtFr, TxtSa, TxtSo };
+    // Montag
+    LblMo.AutoSize = true;
+    LblMo.Location = new Point(12, 20);
+    LblMo.Name = "LblMo";
+    LblMo.Text = "Mo:";
+    TxtMo.Location = new Point(60, 17);
+    TxtMo.Name = "TxtMo";
+    TxtMo.Size = new Size(80, 23);
 
-    for (int i = 0; i < 7; i++)
-    {
-      labels[i].AutoSize = true;
-      labels[i].Location = new Point(12, 20 + i * 30);
-      labels[i].Text = $"{tage[i]}:";
-      felder[i].Location = new Point(60, 17 + i * 30);
-      felder[i].Name = $"Txt{tage[i]}";
-      felder[i].Size = new Size(80, 23);
-      Controls.Add(labels[i]);
-      Controls.Add(felder[i]);
-    }
+    // Dienstag
+    LblDi.AutoSize = true;
+    LblDi.Location = new Point(12, 50);
+    LblDi.Name = "LblDi";
+    LblDi.Text = "Di:";
+    TxtDi.Location = new Point(60, 47);
+    TxtDi.Name = "TxtDi";
+    TxtDi.Size = new Size(80, 23);
 
+    // Mittwoch
+    LblMi.AutoSize = true;
+    LblMi.Location = new Point(12, 80);
+    LblMi.Name = "LblMi";
+    LblMi.Text = "Mi:";
+    TxtMi.Location = new Point(60, 77);
+    TxtMi.Name = "TxtMi";
+    TxtMi.Size = new Size(80, 23);
+
+    // Donnerstag
+    LblDo.AutoSize = true;
+    LblDo.Location = new Point(12, 110);
+    LblDo.Name = "LblDo";
+    LblDo.Text = "Do:";
+    TxtDo.Location = new Point(60, 107);
+    TxtDo.Name = "TxtDo";
+    TxtDo.Size = new Size(80, 23);
+
+    // Freitag
+    LblFr.AutoSize = true;
+    LblFr.Location = new Point(12, 140);
+    LblFr.Name = "LblFr";
+    LblFr.Text = "Fr:";
+    TxtFr.Location = new Point(60, 137);
+    TxtFr.Name = "TxtFr";
+    TxtFr.Size = new Size(80, 23);
+
+    // Samstag
+    LblSa.AutoSize = true;
+    LblSa.Location = new Point(12, 170);
+    LblSa.Name = "LblSa";
+    LblSa.Text = "Sa:";
+    TxtSa.Location = new Point(60, 167);
+    TxtSa.Name = "TxtSa";
+    TxtSa.Size = new Size(80, 23);
+
+    // Sonntag
+    LblSo.AutoSize = true;
+    LblSo.Location = new Point(12, 200);
+    LblSo.Name = "LblSo";
+    LblSo.Text = "So:";
+    TxtSo.Location = new Point(60, 197);
+    TxtSo.Name = "TxtSo";
+    TxtSo.Size = new Size(80, 23);
+
+    // CmdAuswerten
     CmdAuswerten.Location = new Point(12, 235);
     CmdAuswerten.Name = "CmdAuswerten";
     CmdAuswerten.Size = new Size(130, 28);
     CmdAuswerten.Text = "Auswerten";
     CmdAuswerten.Click += CmdAuswerten_Click;
 
+    // LblDurchschnitt
     LblDurchschnitt.AutoSize = true;
     LblDurchschnitt.Location = new Point(12, 275);
     LblDurchschnitt.Name = "LblDurchschnitt";
     LblDurchschnitt.Text = "";
 
+    // LblMax
     LblMax.AutoSize = true;
     LblMax.Location = new Point(12, 295);
     LblMax.Name = "LblMax";
     LblMax.Text = "";
 
+    // LblMin
     LblMin.AutoSize = true;
     LblMin.Location = new Point(12, 315);
     LblMin.Name = "LblMin";
     LblMin.Text = "";
 
+    // TemperaturAuswertungForm
     AutoScaleDimensions = new SizeF(7F, 15F);
     AutoScaleMode = AutoScaleMode.Font;
     ClientSize = new Size(280, 345);
+    Controls.Add(LblMo);
+    Controls.Add(TxtMo);
+    Controls.Add(LblDi);
+    Controls.Add(TxtDi);
+    Controls.Add(LblMi);
+    Controls.Add(TxtMi);
+    Controls.Add(LblDo);
+    Controls.Add(TxtDo);
+    Controls.Add(LblFr);
+    Controls.Add(TxtFr);
+    Controls.Add(LblSa);
+    Controls.Add(TxtSa);
+    Controls.Add(LblSo);
+    Controls.Add(TxtSo);
     Controls.Add(CmdAuswerten);
     Controls.Add(LblDurchschnitt);
     Controls.Add(LblMax);
